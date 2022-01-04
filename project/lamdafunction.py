@@ -22,7 +22,7 @@ def lambda_handler(event, context):
     bs=event
     runtime=boto3.Session().client('sagemaker-runtime')
     
-    response=runtime.invoke_endpoint(EndpointName=endpoint_Name,
+    response=runtime.invoke_endpoint(EndpointName='pytorch-inference-2022-01-04-03-32-53-734',
                                     ContentType="application/json",
                                     Accept='application/json',
                                     #Body=bytearray(x)
